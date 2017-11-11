@@ -1,3 +1,9 @@
+<?php
+	if(isset($_POST['submit'])){
+	  require_once('mail.php');
+		$sent = mail_sent($_POST);
+	}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
@@ -20,14 +26,14 @@
     	<li><a href="about.htm">About</a></li>
     	<li><a href="music.htm">Music</a></li>
     	<li><a href="gallery.htm">Photos</a></li>
-    	<li><a class="location" href="contact.htm">Contact</a></li>
+    	<li><a class="location" href="contact.php">Contact</a></li>
     </ul>
     <!-- end navigation list addition -->
     <div id="right">
     <div class="vcard">
       <h1>Contact Information</h1>
       <div class="org">
-        <span class="orgname">Essance Project Band</span> 
+        <span class="orgname">Essance Project Band</span>
       </div>
       <address class="adr">
     		<!-- IS THERE A MAILING ADDRESS? -->
@@ -63,7 +69,6 @@
     	<dd>Christmas Parties</dd>
     	<dd>Graduations</dd>
     	<dd>College Events</dd>
-      <br />
     	<dt>Pay Range</dt>
     	<dd>Quote given upon request for services</dd>
     </dl>
@@ -71,7 +76,18 @@
     <!-- end availability list addon -->
     <!-- WHICH FIELDS ARE REQUIRED? -->
     <div id="content">
-    <form action="self" method="post">
+		<?php
+		  if(isset($sent)){
+			  if($sent){
+				  echo '<h1>Thank you for your request.</h1>';
+				}
+				else{
+				  echo "<h1>We're sorry. There was an error processing your request. Please contact us via email or phone as listed to the right.</h1>";
+				}
+			}
+			else{
+    	  echo '<form action="'.$_SERVER['PHP_SELF'].'" method="post">'."\n";
+		?>
       <h1>Request to Hire the Band</h1>
       <fieldset>
         <legend >Your Contact Information:</legend>
@@ -83,18 +99,18 @@
       </fieldset>
       <fieldset class="referrer">
         <legend>How did you hear about Essance Project Band?</legend>
-        <div><label for="client">Referred by a client:</label><input id="client" name="refer" type="radio" /></div>
-        <div><label for="musician">Refered by a band or musician:</label><input id="musician" name="refer" type="radio" /></div>
-        <div><label for="venue">Referred by venue, planner, etc.:</label><input id="venue" name="refer" type="radio" /></div>
-        <div><label for="other">Other:</label><input id="other" name="refer" type="text" /></div>
+        <div><label for="client">Referred by a client:</label><input id="client" name="refer[]" type="radio" value="client" /></div>
+        <div><label for="musician">Referred by a band or musician:</label><input id="musician" name="refer[]" type="radio" value="band" /></div>
+        <div><label for="venue">Referred by venue, planner, etc.:</label><input id="venue" name="refer[]" type="radio" value="venue" /></div>
+        <div><label for="other">Other:</label><input id="other" name="refer[other]" type="text" /></div>
       </fieldset>
       <fieldset class="genre">
         <legend >Specific Musical Genre(s) Requested:</legend>
-        <div><label for="jazz">Jazz:</label><input id="jazz" name="music" type="checkbox" /></div>
-        <div><label for="rb">R &amp; B:</label><input id="rb" name="music" type="checkbox" /></div>
-        <div><label for="oldies">Oldies:</label><input id="oldies" name="music" type="checkbox" /></div>
-        <div><label for="motown">Motown:</label><input id="motown" name="music" type="checkbox" /></div>
-        <div><label for="pop">Pop:</label><input id="pop" name="music" type="checkbox" /></div>
+        <div><label for="jazz">Jazz:</label><input id="jazz" name="music[]" type="checkbox" value="Jazz" /></div>
+        <div><label for="rb">R &amp; B:</label><input id="rb" name="music[]" type="checkbox" value="R &amp; B" /></div>
+        <div><label for="oldies">Oldies:</label><input id="oldies" name="music[]" type="checkbox" value="Oldies" /></div>
+        <div><label for="motown">Motown:</label><input id="motown" name="music[]" type="checkbox" value="Motown" /></div>
+        <div><label for="pop">Pop:</label><input id="pop" name="music[]" type="checkbox" value="Pop" /></div>
       </fieldset>
       <fieldset class="something">
         <legend>Event Information:</legend>
@@ -109,6 +125,7 @@
         <input id="submit" name="submit" value="Submit" type="submit" />
       </fieldset>
     </form>
+		<?php } ?>
     </div><!--content-->
   </div><!--container-->
   </div><!--wrapper-->
