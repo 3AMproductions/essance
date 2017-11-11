@@ -1,0 +1,274 @@
+/*********************************** body ***************************************/
+
+* { margin:0; padding:0; }
+
+html {
+	/* http://www.splintered.co.uk/experiments/49/ */
+	min-height: 100%;
+	margin-bottom: 1px;
+  padding: 0;
+  margin: 0;
+  background: #B4C02B url(images/background.gif) top left repeat-x;
+  color: #2F0834;
+	font-size: 80%; /* modification */
+  line-height: 1.75em; /* modification */
+	font-family: "Lucida Sans Unicode", "Century Gothic", "Trebuchet MS", "Verdana", sans-serif;
+}
+
+#wrapper {
+  padding: 0 0 10px 0;
+	margin: 0 auto;
+	width: 760px;
+  background: url(images/container02.gif) top left repeat-y;
+}
+
+
+/********************************* top elements *********************************/
+
+
+#container {
+  margin: 0 auto;
+  padding: 0;
+	width: 760px;
+  background: url(images/header02.gif) top left no-repeat;
+}
+
+#navigation {
+	padding: 60px 57px 0 425px;
+}
+
+#content {
+  width: 390px;
+  text-align: justify;
+}
+
+#right {
+  display: inline;
+  margin: 0 58px 0 0;
+  position: relative;
+	float: right;
+	width: 276px;
+	text-align: center;
+}
+
+
+/******************************** content sections ****************************/
+
+form{
+  text-align: center;
+}
+
+fieldset {
+	border: 0;
+	width: 100%;
+	padding: 0 0 20px 0;
+	margin: 0;
+}
+
+fieldset div { clear: both; }
+
+fieldset legend {
+	font-size: 1.4em; /* modification */
+  color: #2F0834;
+  margin: 0 0 6px 0;
+}
+
+fieldset label {
+	float: left;
+	width: 150px;
+	text-align: right;
+  clear: both;
+/*	padding-top:5px; /* addition */
+}
+
+fieldset input, fieldset textarea {
+	width: 220px;
+	margin: 10px 0 0 10px;
+}
+
+#submit {
+	width: 80px;
+}
+
+
+/********************************* links ********************************/
+
+#navigation a {
+	position: relative;
+	width: 100%;
+  display: block;
+	color: #2F0834;
+  text-decoration: none;
+  font-size: 1.9em; /* modification */
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Century Gothic", "Lucida Sans Unicode", "Helvetica", sans-serif;
+}
+
+#navigation a:hover, #footer a:hover, #navigation a.location 
+/* addition --> */ , #navigation a:focus, #footer a:focus /* <-- addition */ 
+{
+  color: #E5E7D0;
+  background: #2F0834;
+}
+
+/********************************* lists ********************************/
+
+#navigation {
+	list-style: none;
+  height: 235px;
+  text-align: center;
+}
+
+#navigation li {
+  position: relative;
+  margin: 0px 0px 10px 0px;
+  line-height: 2.2em; /* modification */
+}
+
+dt, .orgname {
+	font-weight: bold;
+  font-size: 1em; /* modification */
+  margin-top: 6px;
+}
+
+
+/********************************* lists ********************************/
+
+#footer {
+	background: #2F0834;
+  height: 150px;
+  padding: 0px 40px;
+  text-align: left;
+  color: #FFFFFF;
+  font-size: 1.5em; /* modification */
+}
+
+#footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+#footer .wrap { 
+  width: 760px; 
+	height: 150px; 
+	margin: 0px auto; 
+	background: url(images/footer.gif) bottom left repeat-y; 
+}
+
+/************************** header typestyles ***************************/
+
+h1
+{
+  margin: 0px 0px 35px 0px;
+  color: #FFFFFF;
+	text-align: left;
+	font-size: 2.3em; /* modification */
+	font-weight: normal;
+	font-family: "Century Gothic", "Trebuchet MS", "Lucida Sans Unicode", "Helvetica", sans-serif;
+}
+
+#right h1 {
+  height: 1%; 
+	background: #B4C20B; 
+	margin: 25px 0px 0px 0px; 
+	padding: 14px 0px; 
+	text-align: center; 
+	font-size: 1.9em;  /* modification */
+}
+
+h2
+{
+	font-family: "Verdana", "Lucida Sans Unicode", "Century Gothic", sans-serif;
+  font-size: 1.4em; /* modification */
+  text-align: left;
+  margin: 15px 15px 10px 15px;
+  color: #FFFFFF;
+  background: inherit;
+}
+
+h3
+{
+	margin: 0px 0px 20px 0px;
+	padding: 0px 8px 0px 0px;
+	color: #E5E7D0;
+	background: #2F0834;
+	text-align: right;
+	font-size: 3em; /* modification */
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Helvetica", "Century Gothic", sans-serif;
+	border-right: 8px solid #FFFFFF;
+
+}
+
+h5
+{
+	margin: 0px 15px 4px 15px;
+	color: #AEC8CF;
+	background: inherit;
+	text-align: left;
+	font-size: 1em; /* modification */
+	font-weight: bold;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Helvetica", "Century Gothic", sans-serif;
+}
+
+h6
+{
+	margin: 0px 15px 0px 15px;
+	padding: 0px 0px 0px 0px;
+	color: #AEC8CF;
+	background: inherit;
+	text-align: right;
+	font-size: 1em; /* modification */
+	font-weight: bold;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Helvetica", "Century Gothic", sans-serif;
+}
+
+/**************************** additions *****************************/
+
+#navigation a:focus, #footer a:focus {
+  outline-color:#B4C20B;
+}
+
+input, textarea {
+  background:none; 
+	color:#2F0834; 
+	border-width:2px; 
+	border-style: solid; 
+	border-color:#B4C02B #B4C02B #2F0834 #B4C02B;
+}
+
+input[type="submit"] {
+	background:#E5E7D0; 
+	color:#2F0834;
+  border:2px outset #2F0834;
+} 
+
+input:focus, textarea:focus {
+  background:#E5E7D0; 
+	color:#2F0834; 
+	border-color:#2F0834;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  text-align:left;
+}
+
+abbr, acronym {
+  border:none; 
+	cursor:help;
+}
+
+.tel .types {
+  display:none; 
+}
+
+.genre input[type="radio"], .referrer input[type="radio"] {
+  width:15px; 
+	float:left; 
+	border-width:0;
+}
+
+.genre input[type="text"], .referrer input[type="text"] {
+	float:left; 
+	border-width:2px;
+}
+

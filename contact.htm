@@ -5,17 +5,25 @@
     <title>Contact &amp; Reserve the Essance Project Band</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="en-us" />
+		<link rel="stylesheet" href="MODessance.css" type="text/css" media="screen" />
+		<!--[if lt IE 7]>
+		  <script src="scripts/ie7-core.js" type="text/javascript"></script>
+			<script src="scripts/ie7-css2-selectors.js" type="text/javascript"></script>
+		<![endif]-->
   </head>
   <body>
+  <div id="wrapper">
+  <div id="container">
     <!-- navigation list added on 2/8 by Jason -->
     <ul id="navigation">
     	<li><a href="home.htm" rel="home">Home</a></li>
     	<li><a href="about.htm">About</a></li>
     	<li><a href="music.htm">Music</a></li>
     	<li><a href="gallery.htm">Photos</a></li>
-    	<li><a href="contact.htm">Contact</a></li>
+    	<li><a class="location" href="contact.htm">Contact</a></li>
     </ul>
     <!-- end navigation list addition -->
+    <div id="right">
     <div class="vcard">
       <h1>Contact Information</h1>
       <div class="org">
@@ -27,7 +35,7 @@
         <span class="locality">Chicago</span>,
         <abbr class="region" title="Illinois">IL</abbr>
         <span class="postal-code">60643</span>
-        <acronym class="country-name" title="United States of America">U.S.A.</acronym>
+        <acronym class="country-name" title="United States of America">USA</acronym>
       </address>
       <address class="adr">
       	<span class="tel">
@@ -55,48 +63,55 @@
     	<dd>Christmas Parties</dd>
     	<dd>Graduations</dd>
     	<dd>College Events</dd>
+      <br />
     	<dt>Pay Range</dt>
     	<dd>Quote given upon request for services</dd>
     </dl>
+    </div><!--right-->
     <!-- end availability list addon -->
     <!-- WHICH FIELDS ARE REQUIRED? -->
+    <div id="content">
     <form action="self" method="post">
       <h1>Request to Hire the Band</h1>
       <fieldset>
         <legend >Your Contact Information:</legend>
-        <label for="name" >Name:</label><input id="name" name="name" type="text" />
-        <label for="phone1">Work Phone:</label><input id="phone1" name="phone1" type="text" />
-        <label for="phone2">Home Phone:</label><input id="phone2" name="phone2" type="text" />
-        <label for="phone3">Cell Phone:</label><input id="phone3" name="phone3" type="text" />
-        <label for="email">Email:</label><input id="email" name="email" type="text" />
+        <div><label for="name" >Name:</label><input id="name" name="name" type="text" /></div>
+        <div><label for="phone1">Work Phone:</label><input id="phone1" name="phone1" type="text" /></div>
+        <div><label for="phone2">Home Phone:</label><input id="phone2" name="phone2" type="text" /></div>
+        <div><label for="phone3">Cell Phone:</label><input id="phone3" name="phone3" type="text" /></div>
+        <div><label for="email">Email:</label><input id="email" name="email" type="text" /></div>
       </fieldset>
-      <fieldset>
+      <fieldset class="referrer">
         <legend>How did you hear about Essance Project Band?</legend>
-        <label for="client">Referred by a client:</label><input id="client" name="refer" type="radio" />
-        <label for="musician">Refered by a band or musician:</label><input id="musician" name="refer" type="radio" />
-        <label for="venue">Referred by venue, planner, etc.:</label><input id="venue" name="refer" type="radio" />
-        <label for="other">Other:</label><input id="other" name="refer" type="text" />
+        <div><label for="client">Referred by a client:</label><input id="client" name="refer" type="radio" /></div>
+        <div><label for="musician">Refered by a band or musician:</label><input id="musician" name="refer" type="radio" /></div>
+        <div><label for="venue">Referred by venue, planner, etc.:</label><input id="venue" name="refer" type="radio" /></div>
+        <div><label for="other">Other:</label><input id="other" name="refer" type="text" /></div>
       </fieldset>
-      <fieldset>
-        <legend>Specific Musical Genre(s) Requested:</legend>
-        <label for="jazz">Jazz:</label><input id="jazz" name="music" type="checkbox" />
-        <label for="rb">R &amp; B:</label><input id="rb" name="music" type="checkbox" />
-        <label for="oldies">Oldies:</label><input id="oldies" name="music" type="checkbox" />
-        <label for="motown">Motown:</label><input id="motown" name="music" type="checkbox" />
-        <label for="pop">Pop:</label><input id="pop" name="music" type="checkbox" />
+      <fieldset class="genre">
+        <legend >Specific Musical Genre(s) Requested:</legend>
+        <div><label for="jazz">Jazz:</label><input id="jazz" name="music" type="checkbox" /></div>
+        <div><label for="rb">R &amp; B:</label><input id="rb" name="music" type="checkbox" /></div>
+        <div><label for="oldies">Oldies:</label><input id="oldies" name="music" type="checkbox" /></div>
+        <div><label for="motown">Motown:</label><input id="motown" name="music" type="checkbox" /></div>
+        <div><label for="pop">Pop:</label><input id="pop" name="music" type="checkbox" /></div>
       </fieldset>
-      <fieldset>
+      <fieldset class="something">
         <legend>Event Information:</legend>
-        <label for="event">Event Type:</label><input id="event" name="event" type="text" />
-        <label for="date">Date:</label><input id="date" name="date" type="text" />
-        <label for="time">Time:</label><input id="time" name="time" type="text" />
-        <label for="location">Location:</label><input id="location" name="location" type="text" />
-        <label for="budget">Budget:</label><input id="budget" name="budget" type="text" />
-        <label for="misc">Other Comments:</label><textarea id="misc" name="misc" rows="2" cols="25"></textarea>
+        <div><label for="event">Event Type:</label><input id="event" name="event" type="text" /></div>
+        <div><label for="date">Date:</label><input id="date" name="date" type="text" /></div>
+        <div><label for="time">Time:</label><input id="time" name="time" type="text" /></div>
+        <div><label for="location">Location:</label><input id="location" name="location" type="text" /></div>
+        <div><label for="budget">Budget:</label><input id="budget" name="budget" type="text" /></div>
+        <div><label for="misc">Other Comments:</label><textarea id="misc" name="misc" rows="2" cols="25"></textarea></div>
       </fieldset>
       <fieldset>
         <input id="submit" name="submit" value="Submit" type="submit" />
       </fieldset>
     </form>
+    </div><!--content-->
+  </div><!--container-->
+  </div><!--wrapper-->
+  <div id="footer"><div class="wrap"><br /><a href="http://www.3amproductions.net">another 3am production</a></div></div><!--footer-->
   </body>
 </html>
