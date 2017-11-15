@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- MimeType: application/xspf+xml -->
+<playlist version="0" xmlns="http://xspf.org/ns/0/">
+	<title>Essance Project Band clips</title>
+  <trackList>
+   <track>
+    <location>http://www.essance.3amproductions.net/xspf/love_calls.mp3</location>
+    <image>http://www.name.com/folder/picture.jpg</image>
+    <annotation>Love Calls</annotation>
+   </track>
+   <track>
+    <location>http://www.essance.3amproductions.net/xspf/bumpin_on_sunset.mp3</location>
+    <image>http://www.name.com/folder/picture.jpg</image>
+    <annotation>Bumpin on Sunset</annotation>
+   </track>
+   <track>
+    <location>http://www.essance.3amproductions.net/xspf/wishing_on_a_star.mp3</location>
+    <image>http://www.name.com/folder/picture.jpg</image>
+    <annotation>Wishing on a Star</annotation>
+   </track>
+  </trackList>
+</playlist>
